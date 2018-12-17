@@ -61,6 +61,9 @@ wget https://s3.amazonaws.com/serverkaka-pubic-file/odoo11/odoo11.conf
 cd /etc/systemd/system/
 wget https://s3.amazonaws.com/serverkaka-pubic-file/odoo11/odoo11.service
 
+# Adjust the Firewall
+ufw allow 8069/tcp
+
 # start odoo11
 sudo systemctl daemon-reload
 sudo systemctl start odoo11
